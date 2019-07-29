@@ -1,8 +1,6 @@
 # Automatic SIL deployment
 
-This repository contains everything you need to easily install and configure the SIL.
-
-Currently in progress.
+This repository contains a docker image that configures the IPSM automatically so that the SIL can be automatically deployed.
 
 ## Build docker image
 
