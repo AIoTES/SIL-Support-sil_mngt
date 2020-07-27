@@ -1,10 +1,7 @@
-# Automatic SIL deployment
+# SIL management scripts
 
-This repository contains a docker image that configures the IPSM automatically so that the SIL can be automatically deployed. This image is used as a previous step for the deployment of the SIL (only the first time).
+This repository contains a set of scripts that manage the IPSM Docker volumes automatically so that the SIL can be automatically deployed. This image is used as a previous step for the deployment of the SIL. It must be used only the first time the SIL is deployed (or in case the SIL external Docker volumes have been deleted for some reason).
 
-## Build docker image
-
-`sudo docker build -t sil-mngt:0.0.1 .`
 
 ## Running the scripts
 
@@ -13,3 +10,9 @@ This repository contains a docker image that configures the IPSM automatically s
 
 ### Deleting IPSM volumes:
 `sudo docker run -v /var/run/docker.sock:/var/run/docker.sock sil-mngt:0.0.1 /bin/sh -c "/mngt/script/uninstall.sh"`
+
+
+## Build docker image
+
+`sudo docker build -t sil-mngt:0.0.1 .`
+
